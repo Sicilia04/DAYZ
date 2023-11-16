@@ -8,8 +8,7 @@ bash "${STEAMCMDDIR}/steamcmd.sh" +force_install_dir "${STEAMAPPDIR}" \
 				+app_update "${STEAMAPPID}" \
 				+quit
 
-sed -i -e "s/{{SERVER_HOSTNAME}}/${CS2_SERVERNAME}/g" \
-	-e "s/{{SERVER_PW}}/${CS2_PW}/g" \
+sed -i -e "s/{{SERVER_PW}}/${CS2_PW}/g" \
 	-e "s/{{SERVER_RCON_PW}}/${CS2_RCONPW}/g" \
 	-e "s/{{SERVER_LAN}}/${CS2_LAN}/g" "${STEAMAPPDIR}/game/csgo/cfg/server.cfg" \
 
@@ -39,4 +38,6 @@ cd "${STEAMAPPDIR}/game/bin/linuxsteamrt64"
 	+map "${CS2_STARTMAP}" \
 	+rcon_password "${CS2_RCONPW}" \
 	+sv_password "${CS2_PW}" \
+	+hostname "${CS2_SERVERNAME}" \
+	+sv_setsteamaccount "${CS2_STEAMTOKEN}" \
 	"${CS2_ADDITIONAL_ARGS}"
