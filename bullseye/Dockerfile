@@ -32,6 +32,7 @@ ENV CS2_SERVERNAME="New \"${STEAMAPP}\" Server" \
     CS2_PORT=27015 \
     CS2_MAXPLAYERS=10 \
     CS2_RCONPW="changeme" \
+    CS2_IP=0.0.0.0 \
     CS2_PW="changeme" \
     CS2_MAPGROUP="mg_active" \    
     CS2_STARTMAP="de_dust2" \
@@ -50,4 +51,4 @@ CMD ["bash", "entry.sh"]
 # 27015/udp = game traffic
 # 27015/tcp = rcon traffic
 EXPOSE 27015/tcp \
-	27015/udp
+       27015/udp
