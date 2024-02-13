@@ -69,6 +69,7 @@ CS2_ADDITIONAL_ARGS=""      (Optional additional arguments to pass into cs2)
 CS2_BOT_DIFFICULTY=""       (0 - easy, 1 - normal, 2 - hard, 3 - expert)
 CS2_BOT_QUOTA=""            (Number of bots)
 CS2_BOT_QUOTA_MODE=""       (fill, competitive)
+CS2_STEAMTOKEN=""           (Use App-ID 730 at https://steamcommunity.com/dev/managegameservers)
 ```
 
 # Credits

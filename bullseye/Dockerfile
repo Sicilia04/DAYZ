@@ -39,6 +39,7 @@ ENV CS2_SERVERNAME="New \"${STEAMAPP}\" Server" \
     CS2_GAMETYPE=0 \
     CS2_GAMEMODE=1 \
     CS2_LAN=0 \
+    CS2_STEAMTOKEN="changeme" \
     CS2_ADDITIONAL_ARGS=""
 
 # Switch to user
