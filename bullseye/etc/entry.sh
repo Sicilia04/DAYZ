@@ -18,7 +18,7 @@ if [[ ! -z $CS2_BOT_DIFFICULTY ]] ; then
     sed -i "s/bot_difficulty.*/bot_difficulty ${CS2_BOT_DIFFICULTY}/" "${STEAMAPPDIR}"/game/csgo/cfg/*
 fi
 if [[ ! -z $CS2_BOT_QUOTA ]] ; then
-    sed -i "s/bot_quota.*/bot_quota ${CS2_BOT_QUOTA}/" "${STEAMAPPDIR}"/game/csgo/cfg/*
+    sed -i "s/bot_quota\s.*/bot_quota ${CS2_BOT_QUOTA}/" "${STEAMAPPDIR}"/game/csgo/cfg/*
 fi
 if [[ ! -z $CS2_BOT_QUOTA_MODE ]] ; then
     sed -i "s/bot_quota_mode.*/bot_quota_mode ${CS2_BOT_QUOTA_MODE}/" "${STEAMAPPDIR}"/game/csgo/cfg/*
@@ -29,6 +29,7 @@ cd "${STEAMAPPDIR}/game/bin/linuxsteamrt64"
 
 # Start Server
 ./cs2 -dedicated \
+	-ip "${CS2_IP}" \
 	-port "${CS2_PORT}" \
 	-console \
 	-usercon \
