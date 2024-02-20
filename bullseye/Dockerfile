@@ -3,10 +3,10 @@
 ###########################################################
 FROM cm2network/steamcmd:root as build_stage
 
-LABEL maintainer="walentinlamonos@gmail.com"
+LABEL maintainer="fla@grapps.fr"
 
-ENV STEAMAPPID 730
-ENV STEAMAPP cs2
+ENV STEAMAPPID 223350
+ENV STEAMAPP dayz
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
 
 COPY etc/entry.sh "${HOMEDIR}/entry.sh"
